@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends Activity implements View.OnClickListener {
@@ -19,6 +20,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     Button button7;
     Button button8;
     Button button9;
+    TextView player;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +36,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         button7=findViewById(R.id.button7);
         button8=findViewById(R.id.button8);
         button9=findViewById(R.id.button9);
+        player=findViewById(R.id.winner);
         kolko.setOnClickListener(this);
         krzyzyk.setOnClickListener(this);
         button.setOnClickListener(this);
@@ -115,7 +118,103 @@ public class MainActivity extends Activity implements View.OnClickListener {
         else if (v.getId() == R.id.button9 && gracz==1) {
             button9.setText("O");
         }
-
+        if (button.getText().toString() == "X" && button2.getText().toString() == "X" && button3.getText().toString() == "X")
+        {
+            player.setText("krzyżyk wygrał");
+            Toast.makeText(getApplicationContext(), "krzyżyk wygrywa", Toast.LENGTH_SHORT).show();
+            finish();
+        }
+        else if(button4.getText().toString() == "X" && button5.getText().toString() == "X" && button6.getText().toString() == "X")
+        {
+            player.setText("krzyżyk wygrał");
+            Toast.makeText(getApplicationContext(), "krzyżyk wygrywa", Toast.LENGTH_SHORT).show();
+            finish();
+        }
+        else if(button7.getText().toString() == "X" && button8.getText().toString() == "X" && button9.getText().toString() == "X")
+        {
+            player.setText("krzyżyk wygrał");
+            Toast.makeText(getApplicationContext(), "krzyżyk wygrywa", Toast.LENGTH_SHORT).show();
+            finish();
+        }
+        else if(button.getText().toString() == "X" && button4.getText().toString() == "X" && button7.getText().toString() == "X")
+        {
+            player.setText("krzyżyk wygrał");
+            Toast.makeText(getApplicationContext(), "krzyżyk wygrywa", Toast.LENGTH_SHORT).show();
+            finish();
+        }
+        else if(button2.getText().toString() == "X" && button5.getText().toString() == "X" && button8.getText().toString() == "X")
+        {
+            player.setText("krzyżyk wygrał");
+            Toast.makeText(getApplicationContext(), "krzyżyk wygrywa", Toast.LENGTH_SHORT).show();
+            finish();
+        }
+        else if(button3.getText().toString() == "X" && button6.getText().toString() == "X" && button9.getText().toString() == "X")
+        {
+            player.setText("krzyżyk wygrał");
+            Toast.makeText(getApplicationContext(), "krzyżyk wygrywa", Toast.LENGTH_SHORT).show();
+            finish();
+        }
+        else if(button.getText().toString() == "X" && button5.getText().toString() == "X" && button9.getText().toString() == "X")
+        {
+            player.setText("krzyżyk wygrał");
+            Toast.makeText(getApplicationContext(), "krzyżyk wygrywa", Toast.LENGTH_SHORT).show();
+            finish();
+        }
+        else if(button3.getText().toString() == "X" && button5.getText().toString() == "X" && button7.getText().toString() == "X")
+        {
+            player.setText("krzyżyk wygrał");
+            Toast.makeText(getApplicationContext(), "krzyżyk wygrywa", Toast.LENGTH_SHORT).show();
+            finish();
+        }
+        //
+        if (button.getText().toString() == "O" && button2.getText().toString() == "O" && button3.getText().toString() == "O")
+        {
+            player.setText("kółko wygrało");
+            Toast.makeText(getApplicationContext(), "kółko wygrywa", Toast.LENGTH_SHORT).show();
+            finish();
+        }
+        else if(button4.getText().toString() == "O" && button5.getText().toString() == "O" && button6.getText().toString() == "O")
+        {
+            player.setText("kółko wygrało");
+            Toast.makeText(getApplicationContext(), "kółko wygrywa", Toast.LENGTH_SHORT).show();
+            finish();
+        }
+        else if(button7.getText().toString() == "O" && button8.getText().toString() == "O" && button9.getText().toString() == "O")
+        {
+            player.setText("kółko wygrało");
+            Toast.makeText(getApplicationContext(), "kółko wygrywa", Toast.LENGTH_SHORT).show();
+            finish();
+        }
+        else if(button.getText().toString() == "O" && button4.getText().toString() == "O" && button7.getText().toString() == "O")
+        {
+            player.setText("kółko wygrało");
+            Toast.makeText(getApplicationContext(), "kółko wygrywa", Toast.LENGTH_SHORT).show();
+            finish();
+        }
+        else if(button2.getText().toString() == "O" && button5.getText().toString() == "O" && button8.getText().toString() == "O")
+        {
+            player.setText("kółko wygrało");
+            Toast.makeText(getApplicationContext(), "kółko wygrywa", Toast.LENGTH_SHORT).show();
+            finish();
+        }
+        else if(button3.getText().toString() == "O" && button6.getText().toString() == "O" && button9.getText().toString() == "O")
+        {
+            player.setText("kółko wygrało");
+            Toast.makeText(getApplicationContext(), "kółko wygrywa", Toast.LENGTH_SHORT).show();
+            finish();
+        }
+        else if(button.getText().toString() == "O" && button5.getText().toString() == "O" && button9.getText().toString() == "O")
+        {
+            player.setText("kółko wygrało");
+            Toast.makeText(getApplicationContext(), "kółko wygrywa", Toast.LENGTH_SHORT).show();
+            finish();
+        }
+        else if(button3.getText().toString() == "O" && button5.getText().toString() == "O" && button7.getText().toString() == "O")
+        {
+            player.setText("kółko wygrało");
+            Toast.makeText(getApplicationContext(), "kółko wygrywa", Toast.LENGTH_SHORT).show();
+            finish();
+        }
 
     }
     }
