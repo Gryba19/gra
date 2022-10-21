@@ -58,10 +58,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
             {
                 Toast.makeText(getApplicationContext(), "kółko", Toast.LENGTH_SHORT).show();
                 gracz = 1;
+                player.setText("gra kółko");
             }
         if(v.getId()==R.id.krzyzyk)
         {   Toast.makeText(getApplicationContext(), "krzyżyk", Toast.LENGTH_SHORT).show();
                 gracz = 2;
+            player.setText("gra krzyżyk");
 
         }
             if (v.getId() == R.id.button && gracz==2) {
@@ -215,6 +217,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
             Toast.makeText(getApplicationContext(), "kółko wygrywa", Toast.LENGTH_SHORT).show();
             finish();
         }
+
 
     }
     }
